@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>week3 문제 8번</title>
+</head>
+<body>
+    <h3>선택사항을 직접 입력하세요.</h3>
+    <form>
+        <fieldset>
+            <legend>학술지정보</legend>
+            <label for="name">전공 분야 :</label>
+            <input type="text" id="name" list="major"> 
+            <datalist id="major">
+                <option value="소프트웨어융합대학"></option>
+                <option value="빅데이터학과"></option>
+            </datalist>
+            <br>
+            <label for="date">등록일 :</label>
+            <input type="date" id="date"> <br>
+            <label>메일 수신 :</label>
+            <label>수신동의</label>
+            <input type="radio" name="mail" value="수신동의">
+            <label>수신거부</label>
+            <input type="radio" name="mail" value="수신거부"> <br>
+            <input type="submit" value="전송">
+            <input type="reset" value="취소">
+        </fieldset>
+    </form>
+</body>
+</html>
