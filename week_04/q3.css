@@ -1,0 +1,24 @@
+h1{
+    background-color: lightsalmon;
+}
+
+h2,blockquote{
+    background-color: lightgoldenrodyellow;
+}
+
+h4{
+    background-color: lightgrey;
+}
+
+h3{
+    background-color: cornflowerblue;
+}
+mark{
+    background-color: hotpink;
+}
+sub,sup,em{
+    color: gold;
+}
+.red{
+    color: red;
+}

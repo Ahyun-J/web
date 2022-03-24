@@ -1,0 +1,29 @@
+header{ 
+    background-color: aliceblue;
+    color: coral;
+}
+
+mark{
+    background-color: aquamarine;
+}
+
+strong{
+    color: blue;
+}
+
+.article{
+   background-color:honeydew;
+}
+
+footer{
+    color: crimson;
+}
+
+em{
+    color:darkseagreen;
+}
+
+h3{
+    color: aqua;
+    background-color:mediumpurple;
+}

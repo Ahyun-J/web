@@ -1,0 +1,25 @@
+.main{
+    color: orangered;
+    background-color: bisque;
+}
+
+.b{
+    color: blueviolet;
+    background-color: cyan;
+}
+
+.o{
+    color: coral;
+    background-color: ghostwhite;
+}
+
+.tea{
+    color: blueviolet;
+    background-color: beige;
+}
+
+.more{
+    color: beige;
+    background-color: blue;
+    font-size: small;
+}
