@@ -1,0 +1,18 @@
+.box{
+    width: 40vw;
+    height: 40vh;
+}
+
+.position{
+    background-color: bisque;
+}
+
+.pseudo{
+    background-color: chartreuse;
+}
+
+input:focus{
+    background-color: red;
+}
+span{color: chartreuse;}
+span:hover{color: red;}
