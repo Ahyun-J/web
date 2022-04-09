@@ -1,0 +1,23 @@
+div{
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: center;
+    border: 2px dashed red;
+    width: 500px;
+    height: 500px;
+
+    background-image: url(pororo1.jpg);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+
+div:hover{
+    background-image: url(pororo2.jpg);
+}
+
+hr{
+    background-color: darkred;
+    height: 2px;
+    width: 480px; 
+}
