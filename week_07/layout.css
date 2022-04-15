@@ -1,0 +1,51 @@
+body{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+
+.left, .right{
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+    overflow: hidden;
+    /* height: 5%; */
+    width: 50%;
+    float: left;
+} 
+
+ul,div{
+    margin: 0;
+    padding: 0;
+}
+
+.gnb li{
+    float: left;
+    list-style-type: none;
+    padding: 5px 10px;
+}
+
+.rank li{
+    float: right;
+    list-style-type: none;
+    padding: 5px 5px;
+}
+
+.gnb li:first-of-type { padding-left: 0px; }
+.rank li:first-of-type { padding-left: 0px; }
+
+div{
+    overflow: hidden;
+    float: right;
+}
+div ul li{
+    padding: 2px;
+}
+a{
+    text-decoration: none;
+}
+
+.text{
+    overflow: hidden;
+    width: 70%;
+    float: left;
+}

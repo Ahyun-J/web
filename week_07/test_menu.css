@@ -1,0 +1,17 @@
+div.menu{
+    position: fixed;
+    right: 20px; top: 60vh;
+}
+
+ul{
+    float: right;
+    background-color: gray;  
+    padding: 5px 50px;
+    border-radius: 5px;
+} 
+
+ul li{
+    float: left;
+    margin-left: 20px;
+    list-style-type: none;
+}

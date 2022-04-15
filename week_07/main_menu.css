@@ -1,0 +1,36 @@
+
+.main{
+    list-style-type: none;
+    margin: 0;
+    float: right;
+    height: 30px;
+    width: 700px;
+    background: black;
+}
+
+.main> li{
+    float: left; 
+    position: relative;
+    color: white;
+    padding: 5px 50px; 
+}
+
+.main ul{
+    white-space:nowrap;
+    list-style-type: none;
+    position: absolute;
+    padding: 0;
+    top: 30px;
+    width: auto;
+    opacity: 0;
+}
+
+.main ul li{
+    padding: 10px; 
+}
+
+.main li:hover> ul{
+    background-color: gray;
+    color: whitesmoke;
+    opacity: 1;
+}
