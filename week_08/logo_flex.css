@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+}
+
+header{
+    width: 80vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: ghostwhite;
+    padding: 10px;
+}
+
+li{
+    line-height: 60px;
+    padding: 10px;
+    display: inline-block;
+    list-style-type: none;
+}
+
