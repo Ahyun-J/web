@@ -38,10 +38,11 @@ section{
     position: relative;
     top: 60px;
     margin: 0 30px;
+    height: 90vh;
 }
 
 #check, table{
-    right: 15px;
+    right: 15vw;
     position: absolute;
     width: 300px;
     height: 90px;
@@ -55,12 +56,20 @@ tr, td{
 }
 
 #check{
-    left: 15px;
+    left: 15vw;
     border-radius: 10px;
     background-color: aquamarine;
+    padding-left: 18px;
+}
+
+#check li{
+    list-style-position: inside;
 }
 
 .footer{
+    height: 40px;
+    width: 300px;
+    line-height: 40px;
     position: absolute;
     bottom: 10px;
     left: 15vw;
