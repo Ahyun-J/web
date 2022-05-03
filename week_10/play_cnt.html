@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const song = {
+            name : '이소라',
+            title : '바람이 분다',
+            time : 3.5,
+            play : function (cnt) {
+                for( let i = 1 ; i <= cnt ; i++){
+                    document.write( `가수: ${song.name}, 제목: ${song.title}, 재생시간: ${song.time * i} => ${i} 번째 재생<br>`);
+                    }
+                }
+        };
+        
+        new song.play(5);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

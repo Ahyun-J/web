@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Vaccine{
+            constructor(vaccine, times, tel){
+                this.vaccine = vaccine;
+                this.times = times;
+                this.tel = tel;
+                // vaccine = '모더나' | '화이자' ;
+                // times = 0;
+                // tel = '010-2193-5234';
+            }
+
+            isFinished(){
+                //접종 횟수가 2이면 ‘접종 완료’, 1이면 ‘추가 1회’,  0이면 ‘미 접종’ 반환
+                if(this.times == 2) return '접종 완료';
+                else if(this.times == 1) return '추가 1회';
+                else if(this.times == 0) return '미 접종';
+            }
+            
+            addShot(){
+                //접종 회수를 +1 증가, 만약 접종 회수가 2이면 증가 없음
+                if(this.times == 2) return;
+                else this.times += 1;
+            }
+
+            changeTel(value){
+                //연락처를 value값으로 변경
+                console.log('연락처 변경 후 출력');
+                this.tel = value;
+            }
+
+        }
+
+        const v1 = new Vaccine('화이자', 0, '010-2193-5234');
+        console.log(`백신종류 : ${v1.vaccine}, 연락처 : ${v1.tel}, 접종현황 : ${v1.isFinished()}`);
+
+        v1.addShot();
+        console.log(`백신종류 : ${v1.vaccine}, 연락처 : ${v1.tel}, 접종현황 : ${v1.isFinished()}`);
+
+        v1.changeTel('010-6543-7968')
+        console.log(`백신종류 : ${v1.vaccine}, 연락처 : ${v1.tel}, 접종현황 : ${v1.isFinished()}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
