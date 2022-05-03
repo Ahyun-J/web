@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function Car(...arg){
-                this.num = arg[`i%2 == 0`];
-                this.ride = arg[`i%2 != 0`];
-            }
+        function Car(...args) {
+            this.num = [];
+            this.drive = [];
 
-        Car.prototype.addMileage = function(dist){
-                Car.ride += dist;
-            }
+            for (let i = 0; i < args.length; i++) {
 
-        Car.prototype.toString = function(){
-            let str = '';
-            for (key in car) {
-                str += `차량번호 : ${this.num}  주행거리 : ${this.ride}<br>`
+                if (i % 2 == 0) {
+                    this.num.push(args[i]);
+                }
+                else {
+                    this.drive.push(args[i]);
+                }
             }
-            return str;
-            // document.write(`<h1>결과를 출력합니다</h1> <hr>`);
-            // for (key in car) {
-            // return document.write(`${key}: ${car[key]}<br>`);
-            //     }
-            }
-        
-        let array = [];
-        let c1 = '';
-        while(true){
-            c1 = prompt(`차량 번호와 주행거리를 입력하세요\n더 이상 없으면 완료를 입력하세요`, []);
-            if(c1 == '완료') break;
-            let c1_arr = c1.split(" ");
-            array.push(c1_arr);
         }
 
-        let car = new Car(array);
-        document.write(`<h1>결과를 출력합니다</h1> <hr>`);
+        Car.prototype.addMileage = function (dist) {
+            for (let i = 0; i < this.drive.length; i++) {
+                this.drive[i] = Number(this.drive[i]) + dist;
+            }
+        }
+
+        Car.prototype.toString = function () {
+            let str = `<h1>결과를 출력합니다</h1> <hr>`;
+
+            for (let i = 0; i < this.num.length; i++) {
+                str += (`차량번호 : ${this.num[i]}  주행거리 : ${this.drive[i]}<br>`);
+            }
+
+            return str;
+        }
+
+        let array = [];
+        let c1 = '';
+        while (true) {
+            c1 = prompt(`차량 번호와 주행거리를 입력하세요\n더 이상 없으면 완료를 입력하세요`, []);
+            if (c1 == '완료') break;
+            let c1_arr = c1.split(" ");
+            array.push(...c1_arr);
+        }
+
+        let car = new Car(...array);
         document.write(car.toString());
 
         car.addMileage(100);
-        document.write(`<h1>결과를 출력합니다</h1> <hr>`);
         document.write(car.toString());
 
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

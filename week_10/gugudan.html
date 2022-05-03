@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        class Gugudan {
+            constructor() {
+            }
+
+            score(test){
+                if(test >= 90) return '친구와 놀아도 됩니다';
+                else if(test >= 80) return '한번 더 연습하세요';
+                else if(test >= 70) return '두번 더 연습하세요';
+                else if(test < 70) return '친구와 놀 수 없습니다';
+            }
+
+            test() {
+                let sum = 0;
+
+                for (let i = 1; i <= 10; i++) {
+                    let a = parseInt(Math.random() * (9 - 1 + 1)) + 1;
+                    let b = parseInt(Math.random() * (9 - 1 + 1)) + 1;
+
+                    let answer = prompt(`${i}] ${a} * ${b} = ?`,0);
+                    if(answer == (a*b)) sum += 1;
+                }
+                
+                alert(`점수 : ${sum*10} -> ${this.score(sum*10)}`);
+            }
+        }
+
+        let gugu = new Gugudan();
+        gugu.test();
         
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>
