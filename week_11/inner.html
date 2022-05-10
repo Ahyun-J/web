@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>여행지</title>
+    <script>
+        window.onload = function () {
+            const place = document.querySelector('a');
+            place.style.textDecoration = 'none';
+            const list = document.querySelector('ul');
+            const li = document.querySelectorAll('li');
+            let i = li.length;
+
+            place.onclick = function () {
+                
+                while (true) {
+                    let travel = prompt('여행지를 입력하세요. 더 이상 없으면 \'f\'를 입력하세요');
+                    if (travel == 'f' || travel == '' || travel == null || false) break;
+
+                    const newItem = document.createElement('li');
+                    newItem.innerHTML = `<li> ${i+1}) ${travel} <\li>`;
+                    // const newText = document.createTextNode(`${i}) ${travel}`);
+                    // newItem.appendChild(newText);
+                    list.appendChild(newItem);
+                    
+
+                    newItem.style.listStyle = 'none';
+                    if(i % 2 == 0){
+                        newItem.style.color = 'red';
+                    }else{
+                        newItem.style.color = 'green';
+                    }
+                    i++;
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <a href="javascript:insert()">이곳을 클릭하여 가고 싶은 여행지를 입력하세요</a>
+    <ul>희망하는 장소 입니다</ul>
+</body>
+
+</html>

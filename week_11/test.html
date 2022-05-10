@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Document Object Model</title>
-  <script>  	 
-      let element = document.getElementById('element');  
-      element.style.color = 'red';
-      element.innerHTML = 'From JavaScript';
- </script>
+   <title>Document Object Model</title>
+   <script>
+      // window.onload = function () {
+      //    let element = document.getElementById('element');
+      //    element.style.color = 'red';
+      //    element.innerHTML = 'From JavaScript';
+      // }
+      const h1 = document.getElementById('element'); 
+      const h2 = document.getElementsByClassName('header'); 
+      const h3 = document.querySelector('h1'); 
+      const h4 = document.querySelectorAll('h1');
+   </script>
 </head>
+
 <body>
-   <h1 id="element">Lorem ipsum dolor amet</h1>
+   <h1 id="element" class="header">Lorem ipsum dolor amet</h1>
 </body>
+
 </html>
