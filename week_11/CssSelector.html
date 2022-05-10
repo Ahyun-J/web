@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+        const items = document.querySelectorAll('.hallym');
+        for(let i = 0; i<items.length; i++){
+            items[i].style.width = '100px';
+            if(i % 2 == 0){
+                items[i].style.backgroundColor = 'gold';
+            }
+            else{
+                items[i].style.backgroundColor = 'gray';
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <h2>css 셀럭터 사용하기</h2>
+    <h4 class = "hallym" >css3</h4>
+    <h4 class = "hallym">html</h4>
+    <h4 class = "hallym">JavaScript</h4>
+    <h4 class = "hallym">TypeScript</h4>
+    <h4 class = "hallym">jQuery</h4>
+  </body>
+  
+</html>
