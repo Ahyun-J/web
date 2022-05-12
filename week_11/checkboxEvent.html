@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Check() {
+            //'확인' 버튼을 클릭했을 때 실행되는 메서드
+            let str = [];
+            const chbox = document.getElementsByName('hobby');
+
+            for(let i = 0; i < chbox.length; i++){
+                if (chbox[i].checked == true) str.push(chbox[i].value+"\n");
+                //else str -= chbox[i].value+"\n";
+            }
+
+            alert('선택결과를 출력합니다\n'+str.join(''));
+        }
+
+        // let hobby = (function () {
+        //     let str = '선택결과를 출력합니다\n';
+        //     return function () {
+        //         if (this.checked) str += (`${this.value}\n`);
+        //         else str -= (`${this.value}`);
+        //         alert(`${str}`);
+        //     }
+        // })();
+
+        window.onload = function () {
+            const chbt = document.querySelector('input[type=button]');
+            chbt.addEventListener('click', Check);
+        }
+
+        // function Chbox() {
+        //     const hob = 'input[type=checkbox]';
+        //     const chbox = document.querySelectorAll(hob);
+
+        //     let str = '선택결과를 출력합니다\n';
+
+        //     return function () {
+        //         if (this.checked) str += (`${this.value}\n`);
+        //         else str -= (`${this.value}`);
+        //         alert(`${str}`);
+        //     }
+
+            // chbox.forEach((cl) => {
+            // cl.addEventListener('click', hobby);
+            // });
+       // }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="checkbox" name="hobby" value="등산">등산
+        <input type="checkbox" name="hobby" value="걷기">걷기
+        <input type="checkbox" name="hobby" value="요가">요가
+        <input type="checkbox" name="hobby" value="조깅">조깅
+        <input type="checkbox" name="hobby" value="서핑">서핑<br>
+        <input type="button" value="checked">
+    </form>
+</body>
+
+</html>

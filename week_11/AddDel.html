@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        window.onload = function(){
-            const list = document.querySelector('#list');
-            const p = document.querySelectorAll('p');
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // window.onload = function () {
+    //   const form = document.querySelector('form');
+    //   form.autocomplete = 'off';
+    //   // const list = document.getElementById('list');
+    //   // const p = document.querySelectorAll('p');
+    // }
 
+    function childNodeAdd() {
+      const list = document.getElementById('list');
+      const newItem = document.createElement('p');
+      const text = document.getElementById("name");
+      const newText = document.createTextNode(text.value);
+      newItem.appendChild(newText);
+      list.appendChild(newItem);
 
+      text.value = null;
+    }
+
+      function childNodeDelete() {
+        const list = document.getElementById('list');
+        const text = document.getElementById("name");
+        const items = document.querySelectorAll('p');
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].textContent == text.value) {
+            items[i].remove(); break;
+          }
         }
-        
-        function childNodeAdd() {
-            const list = document.querySelector('#list');
-            const newItem = document.createElement('p');
-            let text = document.querySelector('#name');
-            const newText = document.createTextNode(text.textContent);
-            newItem.appendChild(newText);
-            list.appendChild(newItem);
-        }
-
-        function childNodeDelete() {
-            const list = document.querySelector('#list');
-            const delItem = document.createElement('p');
-            const text = document.querySelector('input');
-            const delText = document.createTextNode(text.nodeValue);
-            delItem.appendChild(delText);
-            list.removeChild(delItem);
-        }
-
-    </script>
+        text.value = null;
+      }
+  </script>
 </head>
+
 <body>
-    <div id="container">
-      <h3> 항목 삭제 & 추가</h3>
-      <form>
-        name : <input type="text" id="name" required><br>
-       </form>
-    </div>
-    <hr>
-    <div id="list">
-      <p>사과</p>
-      <p>레몬</p>
-      <p>자두</p>
-    </div>
-    <input type="button" value="add" onclick="childNodeAdd()">
-    <input type="button" value="delete" onclick="childNodeDelete()">
-  </body>
-  
+  <div id="container">
+    <h3> 항목 삭제 & 추가</h3>
+    <form>
+      name : <input type="text" id="name" required><br>
+    </form>
+  </div>
+  <hr>
+  <div id="list">
+    <p>사과</p>
+    <p>레몬</p>
+    <p>자두</p>
+  </div>
+  <input type="button" value="add" onclick="childNodeAdd()">
+  <input type="button" value="delete" onclick="childNodeDelete()">
+</body>
+
 </html>
