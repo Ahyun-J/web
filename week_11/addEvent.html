@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const input = document.querySelectorAll('input[type=text]');
+        // const id = input.firstChild;
+        // const pass = input.lastChild;
+        //const Idstr = id.nodeValue;
+
+        // function Add() {
+        //     const con = document.getElementById('container');
+        //     const newItem = document.createElement('p');
+        //     const Iditem = id.value;
+        //     const Pwitem = pass.value;
+        //     const str = document.createTextNode(`id = ${Iditem.nodeValue}, pass = ${Iditem.nodeValue}`);
+        //     newItem.appendChild(str);
+        //     con.appendChild(newItem);
+
+        //     text.value = null;
+        // }
+
+        // function PwFocus(event) {
+        //     if (id.value.length >= 8) {
+        //         pass.focus();
+        //     }
+        // }
+
+        // function IdFocus(event) {
+        //     if (event.keyCode === 8 && pass.value.length == 0) {
+        //         id.focus();
+        //     }
+        // }
+
+        function List() {
+            const input = document.querySelectorAll('input[type=text]');
+            const id = input[0];
+            const pass = input[1];
+
+            const con = document.getElementById('container');
+            const newItem = document.createElement('p');
+            const Iditem = id.value;
+            const Pwitem = pass.value;
+
+            let str = `데이터 처리 완료 \n id = ${Iditem}, pass = ${Pwitem}`;
+            alert(`${str}`);
+
+            str = document.createTextNode(`id = ${Iditem}, pass = ${Pwitem}`);
+            newItem.appendChild(str);
+            con.appendChild(newItem);
+
+            id.value = null; pass.value = null;
+        }
+
+        window.onload = function () {
+            const chbt = document.getElementById('add');
+            chbt.addEventListener('click', List);
+
+            const input = document.querySelectorAll('input[type=text]');
+            const id = input[0];
+            const pass = input[1];
+
+            id.addEventListener('keydown', function (e) {
+                if (id.value.length >= 8) {
+                pass.focus();}
+            });
+            pass.addEventListener('keydown', function (e) {
+                if (event.keyCode === 8 && pass.value.length == 0) {
+                id.focus();}
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        id : <input type="text" maxlength="8">
+        <p></p>
+        pass : <input type="text" maxlength="8">
+        <p></p>
+        <input type="button" value="추가하기" id="add">
+    </form>
+    <h3>------ input list -------</h3>
+    <hr>
+    <div id='container'></div>
+</body>
+
+</html>

@@ -25,17 +25,17 @@
       text.value = null;
     }
 
-      function childNodeDelete() {
-        const list = document.getElementById('list');
-        const text = document.getElementById("name");
-        const items = document.querySelectorAll('p');
-        for (let i = 0; i < items.length; i++) {
-          if (items[i].textContent == text.value) {
-            items[i].remove(); break;
-          }
+    function childNodeDelete() {
+      const list = document.getElementById('list');
+      const text = document.getElementById("name");
+      const items = document.querySelectorAll('p');
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].textContent == text.value) {
+          items[i].remove(); break;
         }
-        text.value = null;
       }
+      text.value = null;
+    }
   </script>
 </head>
 
