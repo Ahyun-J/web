@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('.hallym').each(function(index){
+            //     $(this).css('width', '200px');
+            //     if(index%2==0){
+            //         $(this).css('background-color', 'grey');
+            //     } else {
+            //         $(this).css('background-color', 'gold');
+            //     }
+            // });
+
+            $('.hallym').odd().css('background-color', 'gold').css('width', '200px');
+            $('.hallym').even().css('background-color', 'grey').css('width', '200px');
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery selector 사용하기</h2>
+    <h4 class="hallym">css3</h4>
+    <h4 class="hallym">html</h4>
+    <h4 class="hallym">JavaScript</h4>
+    <h4 class="hallym">TypeScript</h4>
+    <h4 class="hallym">jQuery</h4>
+  </body>  
+</html>

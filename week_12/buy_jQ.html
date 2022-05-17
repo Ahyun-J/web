@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+          width : 400px;
+          margin-left: 10px;
+          border : 1px solid chocolate;
+        }
+       </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>    
+    <script>
+         const Checks = function () {
+            let str = [];
+            str.push() = prompt('구입 품목과 개수를 입력하세요. 종료하려면 종료를 입력하세요')
+            $('input:checked').each(function () { str += $(this).val() + ' '; });
+            $('h2').html('총 구매 개수는 [] 입니다');
+
+        };
+        $(document).ready(function () {
+            Checks();
+        })
+    </script>
+</head>
+<body>
+    <h2>구매내역</h2>
+    <ul></ul>
+    <hr>
+    <h2></h2>
+  </body>
+  
+</html>
