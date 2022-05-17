@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $('div').css('height','50px');
+        //$('div:first-child').css('background','red');
+         ///$('div:eq(0)').css('background','red');
+         //$('div').first().css('background','red');
+         //$('div:odd').css('background','red');
+         $('div').eq(1).css('background','red');
+        });
+        
+    </script>
+</head>
+<body>
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div id = "chane">d</div>
+    <div>e</div>
+</body>
+</html>

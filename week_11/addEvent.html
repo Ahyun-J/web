@@ -64,11 +64,11 @@
             const id = input[0];
             const pass = input[1];
 
-            id.addEventListener('keydown', function (e) {
+            id.addEventListener('keydown', function (event) {
                 if (id.value.length >= 8) {
                 pass.focus();}
             });
-            pass.addEventListener('keydown', function (e) {
+            pass.addEventListener('keydown', function (event) {
                 if (event.keyCode === 8 && pass.value.length == 0) {
                 id.focus();}
             });
