@@ -9,9 +9,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         const DivColor = function () {
-            divcol = ['red', 'green', 'yellow', 'blue', 'orange', 'purple', 'pink', 'darkgray'];
-            const ran = Math.random() * divcol.length();
-            $('#box').css('background-color', 'divcol[ran]');
+            const divcol = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+            $('#box').css('background-color', divcol);
+            // const divcol2 = ['red', 'green', 'yellow', 'blue', 'hotpink','pink','purple','orange'];
+            // let ran = Math.round(Math.random() * divcol2.length-1);
+            // $('#box').css('background-color', divcol2[ran]);
         };
 
         $(document).ready(function () {
