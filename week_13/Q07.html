@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <style>
-        body {
+    <head>
+        <meta charset="UTF-8">
+         <style>
+          body {
             font-size: 9pt;
             font-family: "굴림";
-        }
-
-        ul.menu {
+          }
+      
+          ul.menu {
             padding: 10px;
             list-style: none;
             border: 1px #000 solid;
-            width: 250px;
-        }
-
-        ul.menu li {
+            width : 250px;
+          }
+      
+          ul.menu li {
             border-bottom: 1px #eeeeee solid;
             margin: 10px;
-        }
-
-        li.select {
+          }
+      
+          li.select {
             background-color: #ccc;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script>
-        $(document).ready(function () {
+          }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+          $(document).ready(function () {
             console.log(`font-size= ${$("ul.menu li").css("font-size")}`);
             const info = $("ul.menu").css(["width", "height"]);
             console.log(`width = ${info.width}, height = ${info.height}`);
             console.log(`src = ${$(".header img").attr("src")}`);
             console.log(`.menu.html() = ${$(".menu").html()}`);
             console.log(`.menu li = ${$(".menu").children().eq(1).text()}`);
-        });
-    </script>
-</head>
-
-<body>
-    <ul class="menu">
-        <li>web_menu1</li>
-        <li>web_menu2</li>
-        <li>web_menu3</li>
-        <li>web_menu4</li>
-        <li>web_menu5</li>
-    </ul>
-    <div class="header">
-        <img src="http://placekitten.com/150/150" alt="">
-    </div>
-</body>
+          });
+        </script>
+      </head>
+      <body>
+        <ul class="menu">
+          <li>web_menu1</li>
+          <li>web_menu2</li>
+          <li>web_menu3</li>
+          <li>web_menu4</li>
+          <li>web_menu5</li>
+        </ul>
+        <div class="header">
+          <img src="http://placekitten.com/150/150" alt="">
+        </div>
+      </body>
+      
 
 </html>

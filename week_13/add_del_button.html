@@ -8,19 +8,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function () {
+            $('.menu').css('list-style','none');
+            
             $('#add').click(function () {
                 const name = $('#menuName').val();
                 let item = "<li>"+ name +"</li>";
                 $('.menu').append(item);
+                $(`li:contains(${name})`).addClass(`${name}`).css({'border':'1px solid gray','margin':'10px'});       
             });
 
             $('#remove').click(function () {
                 const name = $('#menuName').val();
-                let item = "<li>"+ name +"</li>";
-                $('.menu li').remove(`:contains(${item})`);
+                $(`.${name}`).remove();
             });
-            $('.menu').css('list-style','none');
-            $('li').css('border','5px solid gray');
         })
     </script>
 </head>
