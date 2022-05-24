@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+         $(document).ready(function () {
+            $('.box1 img').css('height', '210px');
+            $('hr').css({'width':'70%', 'display': 'inline-block'});
+
+            $('.choice button').click(function(){
+                const imgval = $('option:selected').val();
+                $('.box1 img').attr('src', imgval);
+
+                const url =  $('input:checked').val();
+                const http = 'https://www.' + url;
+                $('.box1 a').attr('href', http).text(url);
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="box1">
+      <a href="#">클릭하세요</a>
+      <br>
+      <img src="imgs/flower1.jpeg" alt="">
+    </div>
+    <hr>
+    <div class="box2">
+      <h2>이미지</h2>
+      <select id="imglist">
+        <option value="imgs/flower1.jpeg">flower1</option>
+        <option value="imgs/flower2.png">flower2</option>
+        <option value="imgs/flower3.jpeg">flower3</option>
+      </select>
+      <h2>URL</h2>
+      <input type="radio" name="url" value="naver.com">naver<br>
+      <input type="radio" name="url" value="daum.net">daum<br>
+      <input type="radio" name="url" value="hallym.ac.kr">hallym
+    </div>
+    <hr>
+    <div class="choice">
+      <button>apply</button>
+    </div>
+  </body>
+  
+</html>

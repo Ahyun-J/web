@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div').css({
+                'width':'150px', 'height':'150px', 'display':'inline-block',
+            'text-align':'center','line-height':'150px', 'margin':'10px'});
+            $('div').first().css('background-color', 'red').addClass('first');
+            $('div').eq(1).css('background-color', 'orange').addClass('two');
+            $('div').eq(2).css('background-color', 'blue').addClass('three');
+            $('div').eq(3).css('background-color', 'yellow').addClass('four');
+            $('div').last().css('background-color', 'green').addClass('last');
+            setInterval(function () {
+                $('div').first().appendTo('body');
+            },2000);
+        })
+    </script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </body>
+  
+</html>

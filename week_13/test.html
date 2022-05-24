@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+    <script>
+        $document.ready(function(){
+            $('.level-2').children().css('font-size','25px');
+            $('.level-2').children.eq(0).css('border','2px solid blue');
+            $('.item2').parents('li').css('background-color','blue');
+            $('.item2').next().css('color','blue').css('font-size','30px');
+        })
+    </script>
+</head>
+<body>
+    <ul class="level-1">
+      <li class="item-a">A
+      <li class="item-b">B
+        <ul class="level-2">
+          <li class="item-1">1</li>
+          <li class="item-2">2</li>
+          <li class="item-3">3</li>
+        </ul>
+      </li>
+      <li class="item-c">C</li>
+    </ul>
+  </body>
+  
+</html>
