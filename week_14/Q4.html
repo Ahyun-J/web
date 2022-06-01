@@ -8,10 +8,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function () {
-            $("div").css({'width':'120px', 'height':'120px','display':'inline-block'});
-            $("#one").css('background','red');
-            $("#two").css('background','chartreuse');
-            $("#three").css('background','blue');
+            $("div").css({'width':'100px', 'height':'100px'});
+            $("#one").css({'background':'red','position':'relative'});
+            $("#two").css({'background':'chartreuse', 'top':'58px', 'left':'58px','position':'absolute'});
+            $("#three").css({'background':'blue', 'top':'108px', 'left':'108px','position':'absolute'});
             $("div").click(function () {
                 $(this).fadeTo(0,Math.random());
             });
