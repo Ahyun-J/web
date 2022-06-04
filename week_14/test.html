@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
-        let event = jQuery.event("addItme");
-        let en   = jQuery.Event("addItme");
+         $(document).ready(function () {
+             $('h1').css({'width':'200px','height':'200px','background-color':'#FF0'});
+             $("#bt1").on("click", function(){
+                 $('h1').slideDown('slow');
+             });
+             $("#bt2").on("click", function(){
+                 $('h1').slideup('slow');
+             });
+         });
     </script>
 </head>
 <body>
-    
+    <button id="btn1">1</button>
+    <button id="btn2">2</button>
+    <h1>content</h1>
 </body>
 </html>

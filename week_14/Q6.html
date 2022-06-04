@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,22 +6,74 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function () {
+            $('body').css('background-color', 'lavender');
+            $('#box1').css({'height':'10%','background-color':'aliceblue','padding':'20px'});
+            $('img').css({'width':'0','height':'0','float':'left'});
+            $('#box2').css({'text-size':'10px','float':'left','opacity':'0','display':'none','margin-left':'20px'});
+           
+            $('#btn2').one('click', function(){
+                $('#box1').animate({
+                    height: "100%"
+                },1000,function(){
+                    $('img').animate({
+                        width: "+=450px",
+                        height: "+=450px"
+                    },function(){
+                        $("#box2").show();
+                        $('#box2').animate({
+                            opacity: 1
+                        })
+                    })
+                });
+            });
+            
+            
+            $('.txt').css({'text-align':'center','clear': 'both'});
+            
+            
 
+            // $('#box2').css({'background-color':'aliceblue','margin-right':'20px','padding':'20px','float':'right'
+            // }).on("mouseenter",function(){
+            //     $(this).animate({
+            //         width: "45vw",
+            //         height: "45vw",
+            //     }).css({'background-color':'rgba( 255, 255, 255, 0 )','float':'right'
+            //     }).html(
+            //         "학교 : <strong>한림대학교</strong><br>학과 : 소프트웨어융합대학 <mark>빅데이터학과</mark> <br>학번 : 20215247<br>생년월일 : 2002년 12월 23일<br> 별명 : 조아현이 조아현(좋아요)<br>")
+            // });
+            
+            $('h3').css('padding-top','20px');
+            $('#btn1').click(function () {
+                const divcol = "#" + Math.round(Math.random() * 0xffffff).toString(16);
+                $('.txt').css('color', divcol);
+            });
 
+            $('img').hover(function () {
+                $(this).attr("src", "image2.jpg");
+            }, function () {
+                $(this).attr("src", "image3.jpg");
+            });
+            
         })
     </script>
 </head>
- <body>
-    <h1>Ahyun Jo🍕</h1>
+
+<body>
+    <h1 id="main" class="txt">Ahyun Jo🍕 <button id="btn2"> click!</button></h1>
     <hr>
-    
-    <p>
-        학교 : <strong>한림대학교</strong><br>
-        학과 : 소프트웨어융합대학 <mark>빅데이터학과</mark> <br>
-        학번 : 20215247<br>
-        생년월일 : 2002년 12월 23일<br>
-        별명 : 조아현이 조아현<em>(좋아요)</em><br>
-        <br> 열심히 배우겠습니다. 감사합니다:)!
-    </p>
- </body>
+    <div id="box1">
+            <img src="image3.jpg" alt="">       
+            <div id="box2">
+                <h3>이미지에 마우스를 올려보세요🖱<br><br></h3>
+                이름👩🏻‍💻 : 조아현<br><br>
+                학교🏫 : <strong>한림대학교</strong> 소프트웨어융합대학 <mark>빅데이터학과</mark> <br><br>
+                학번📒 : 20215247<br><br>
+                생년월일🥳 : 2002년 12월 23일<br><br>
+                좋아하는 음식🍕 : 피자 <br><br> 취미🎨 : 그림그리기<br><br>
+                별명💖 : 조아현이 조아현(좋아요)<br><br>
+            </div>
+        <h3 class="txt">감사합니다:) <button id="btn1"> 색깔 체인지!</button></h3>
+    </div>
+</body>
+
 </html>
